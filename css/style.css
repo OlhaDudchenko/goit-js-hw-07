@@ -1,0 +1,37 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#gallery {
+  display: flex;
+  margin: 0;
+  padding: 50px 50px;
+  list-style-type: none;
+}
+
+.gallery__list {
+  display: flex;
+  border: 5px solid rgb(14, 19, 14);
+  list-style: none;
+}
+.gallery__list:not(:last-child) {
+  margin-right: 30px;
+}
+p {
+  margin-top: 50px;
+  text-align: center;
+}
+a {
+  font-size: 20px;
+  text-decoration: none;
+  color: rgb(14, 19, 14);
+}
