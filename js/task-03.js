@@ -21,9 +21,9 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-console.log(images);
+
 const galleryEl = document.querySelector('#gallery');
-console.dir(galleryEl);
+
 
 const createMarkup = (images) => {
     return images.map(image => {
