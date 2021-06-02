@@ -10,11 +10,11 @@
 // Каждый следующий div после первого, должен быть шире и выше предыдущего на 10px
 // Создай функцию destroyBoxes(), которая очищает div#boxes.
 const refs = {
-     input:document.querySelector('input'),
-     btnRender: document.querySelector('[data-action="render"]'),
-     btnDestroy: document.querySelector('[data-action="destroy"]'),
-     divContainer:document.querySelector('#boxes'),
-}
+    input: document.querySelector('input'),
+    btnRender: document.querySelector('[data-action="render"]'),
+    btnDestroy: document.querySelector('[data-action="destroy"]'),
+    divContainer: document.querySelector('#boxes'),
+};
 
 refs.btnRender.addEventListener('click', getAmount);
 refs.btnDestroy.addEventListener('click', destroyOnClick);
