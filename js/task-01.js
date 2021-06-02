@@ -3,12 +3,13 @@
 //1) Посчитает и выведет в консоль количество категорий в ul#categories, то есть
 // элементов li.item. Получится 'В списке 3 категории.'.
 
-const liItemsEl = document.querySelectorAll('.item');
-// console.log(liItemsEl);
-const composeMessage=() =>{
-    return `В списке ${liItemsEl.length} категории.`;
-   }
-console.log(composeMessage());
+const items = document.querySelectorAll('.item');
+
+function composeMessage(){
+    console.log( `В списке ${items.length} категории.`);
+}
+composeMessage();
+
 
 
 //2) Для каждого элемента li.item в списке ul#categories, найдет и выведет в консоль
@@ -19,8 +20,8 @@ console.log(composeMessage());
 
 
 
-const createMessage = ()=> {
-     return liItemsEl.forEach(liItemEl => console.log(`Категория: ${liItemEl.firstElementChild.textContent} Количество элементов: ${liItemEl.lastElementChild.children.length} `));
+function createMessage(){
+items.forEach(item => console.log(`Категория: ${item.firstElementChild.textContent} Количество элементов: ${item.lastElementChild.children.length} `));
 }
 createMessage();
 
