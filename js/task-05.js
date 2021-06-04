@@ -5,19 +5,19 @@ const refs={
     input: document.querySelector('#name-input'),
     output: document.querySelector('#name-output'),
 };
-console.log(refs.output);
+
 
 refs.input.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
-     console.log(refs.input.value);
     if (refs.input.value === '') {
        
-        refs.output.innerHTML = 'незнакомец';
+       refs.input.value === '';
     }
     else {
 
         refs.output.innerHTML = refs.input.value;
     }
+
 };
 
