@@ -20,23 +20,30 @@ refs.btnRender.addEventListener('click', getAmount);
 refs.btnDestroy.addEventListener('click', destroyOnClick);
 
 function getAmount() {
-const amount = refs.input.value;
+    const amount = Number(refs.input.value);
+
     
  createBoxes(amount);
 };
 
+
 function createBoxes(amount) {
-const defaultSize = 30;
 
-for (let i = 0; i < amount; i += 1){
+    let defaultSize = 30;
+   
+    new Array(amount).fill(0).map(( value,index) => {
+        
+        let size = defaultSize + index * 10;
+        const divEl = document.createElement('div');
+        divEl.style.cssText = `width:${size}px;height:${size}px;background-color:rgb(${randomRgb(0, 255)},${randomRgb(0, 255)},${randomRgb(0, 255)});`
+       console.log(divEl);
+        refs.divContainer.append(divEl);
+     
+    }
+    );
+};
 
-    let size = defaultSize + i*10 ;
-    const  divEl = document.createElement('div');
-    divEl.style.cssText = `width:${size}px;height:${size}px;background-color:rgb(${randomRgb(0,255)},${randomRgb(0,255)},${randomRgb(0,255)});`
-    refs.divContainer.append(divEl)
-    };
-    
-   };
+
 
 function destroyOnClick(){
     refs.input.value = '';
@@ -53,3 +60,18 @@ function randomRgb(min,max) {
 
 
 
+
+
+
+// function createBoxes(amount) {
+// const defaultSize = 30;
+
+// for (let i = 0; i < amount; i += 1){
+//     console.log(i);
+//     let size = defaultSize + i*10 ;
+//     const  divEl = document.createElement('div');
+//     divEl.style.cssText = `width:${size}px;height:${size}px;background-color:rgb(${randomRgb(0,255)},${randomRgb(0,255)},${randomRgb(0,255)});`
+//     refs.divContainer.append(divEl)
+//     };
+    
+// };
