@@ -3,14 +3,13 @@
 // Если введено подходящее количество, то border инпута становится зеленым, если неправильное - красным.
 
 const input = document.querySelector('#validation-input');
-const inputAttribute =Number(input.getAttribute("data-length"));
+const inputAttribute = Number(input.getAttribute("data-length"));
+console.log(inputAttribute)
 
-input.addEventListener('input', onInputBlur);
+input.addEventListener('blur', onInputBlur);
 
 function onInputBlur(event) {
-    if (event.currentTarget.value.length !== inputAttribute) {
-        return input.className = 'invalid ';
-        
-    }
-    return input.className = 'valid ';
+
+event.currentTarget.classList.add(event.currentTarget.value.length !== inputAttribute?"invalid":"valid");
+
 };
