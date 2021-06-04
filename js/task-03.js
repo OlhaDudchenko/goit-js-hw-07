@@ -24,36 +24,39 @@ const images = [
 
 
 const galleryEl = document.querySelector('#gallery');
-
+                // 1 ВАРИАНТ РЕШЕНИЯ
 const itemsEl = galleryEl.insertAdjacentHTML('afterbegin', `<li class="gallery__list"><img src="${images[0].url}" alt="${images[0].alt}"></img></li><li class="gallery__list"><img src="${images[1].url}" alt="${images[1].alt}"></img></li><li class="gallery__list"><img src="${images[2].url}" alt="${images[2].alt}"></img></li>`);
 console.log(galleryEl);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                     // 2 ВАРИАНТ РЕШЕНИЯ
+// let items = [];
 // const createMarkup = (images) => {
 //     return images.map(image => {
-        // const itemEl = galleryEl.insertAdjacentHTML('afterbegin', `<li class="gallery__list"><img src="${image.url}" alt="${image.alt}"></img></li>`);
-      
-//         return itemsEl;
+// const item = `<li class="gallery__list"><img src="${image.url}" alt="${image.alt}"></img></li>`;
+        
+// items.push(item);
+
 //     });
 // };
 // createMarkup(images);
+// galleryEl.insertAdjacentHTML('afterbegin', items.join(''));
 
 // console.log(galleryEl);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
