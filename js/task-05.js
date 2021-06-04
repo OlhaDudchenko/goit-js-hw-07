@@ -10,6 +10,10 @@ refs.input.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
     
-refs.output.textContent = event.currentTarget.value;
-  
-}
+    if (event.currentTarget.value==='' ) {
+
+        event.currentTarget.value = 'незнакомец';
+    }
+
+   refs.output.textContent = event.currentTarget.value;
+};
