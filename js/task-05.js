@@ -12,7 +12,7 @@ refs.input.addEventListener('input', onInputChange);
 function onInputChange(event) {
     if (refs.input.value === '') {
        
-       refs.input.value === '';
+       refs.output.innerHTML = 'незнакомец';
     }
     else {
 
